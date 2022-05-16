@@ -1,1 +1,5 @@
+HashTable VS. Dictionary
 
+dictionary A mapping from a set of keys to their corresponding values. 
+hashtable The algorithm used to implement Python dictionaries.
+hash function A function used by a hashtable to compute the location for a key.
