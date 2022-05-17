@@ -3,3 +3,26 @@ HashTable VS. Dictionary
 dictionary A mapping from a set of keys to their corresponding values. 
 hashtable The algorithm used to implement Python dictionaries.
 hash function A function used by a hashtable to compute the location for a key.
+
+Dictionary, Hash and Set
+- Dictionary uses Key-value storage
+- Hashtable is an algorithm used to implement python dictionaries, which computes the location by key.
+- Set is similar to dictionary, but does not store value. key cannot be duplicated in set. (#217, #349)
+
+Hash Function
+ Direct address method (#217)
+    - Hash(key) = key
+    - This method is the simplest to compute and does not generate conflicts. It is suitable for cases 
+      where the distribution of keywords is basically contiguous. If the distribution of keywords is not contiguous 
+      and there are many empty spaces, it will cause a waste of storage space. (Algorithm passbook)
+
+ Divide-and-reserve remainder method (#706)
+    - Hash(key) = key % p
+
+Hash Collision
+Two data in the hash table share the same hash value
+
+First task review: Due to the lack of proficiency in the hash table when starting to program do not know where to start. 
+I looked at the github ideas to start organizing the algorithm. Later on, I will think about other different approach to programming. 
+The beginning of everything is difficult, although for the inner logic of these algorithms such as the final design of the hashmap still
+confused me in some ways. But together with everyone working towards the goal I believe my understanding of algorithm will get better and better!
