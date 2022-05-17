@@ -14,3 +14,20 @@ for i in range(len(nums)):
                 continue
         else:
             continue
+
+            
+#Accepted version
+class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        hashT = set()
+        
+        for i in range(len(nums)):
+            if nums[i] in hashT:
+                return True
+            else:
+                hashT.add(nums[i])
+                
+            if len(hashT) > k:
+                hashT.remove(nums[i - k])
+                
+        return False
